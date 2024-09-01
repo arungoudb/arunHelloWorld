@@ -14,7 +14,7 @@ public class ProductService {
         productVO.setProductId(String.valueOf(1l));
         productVO.setProductName("Apple Iphone 15");
         productVO.setDescription("Iphone Pro version");
-
+        productVO.setPrice(100000);
         return productVO;
     }
 }
