@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - aws --version
-      - aws ecr get-login-password --region=us-east-2 | docker login --username AWS --password-stdin 430251448644.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region=us-east-1 | docker login --username AWS --password-stdin 430251448644.dkr.ecr.us-east-1.amazonaws.com
       - REPOSITORY_URI=430251448644.dkr.ecr.us-east-1.amazonaws.com/arungoudnamespace/awsfirstappregistry
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
